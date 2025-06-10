@@ -42,10 +42,6 @@
 
 #### Using requirements.txt
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/PBIP.git
-cd PBIP
-
 # Create virtual environment
 conda create -n pbip python=3.8
 conda activate pbip
@@ -81,7 +77,9 @@ data/
 ```
 
 ## 🚀 Quick Start
-Training & Generate CAMs
+Downloading pre-trained SegFromer here([https://arxiv.org/abs/2503.12068](https://connecthkuhk-my.sharepoint.com/personal/xieenze_connect_hku_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxieenze%5Fconnect%5Fhku%5Fhk%2FDocuments%2Fsegformer%2Fpretrained%5Fmodels&ga=1)).
+
+Training Stage 1 & Generate CAMs
 ```bash
 # Train the PBIP model
 python train_stage_1.py --config ./work_dirs/bcss/classification/config.yaml --gpu 0
