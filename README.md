@@ -77,18 +77,18 @@ Training Stage 1 & Generate CAMs
 python train_stage_1.py --config ./work_dirs/bcss/classification/config.yaml --gpu 0
 ```
 
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ```bibtex
 @inproceedings{pbip2025,
   title={Prototype-Based Image Prompting for Weakly Supervised Histopathological Image Segmentation},
-  author={Your Name and Co-authors},
+  author={Qingchen Tang and Lei Fan and Maurice Pagnucco and Yang Song},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2025}
 }
 ```
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
