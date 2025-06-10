@@ -75,8 +75,8 @@ def train(cfg):
                             num_workers=num_workers,
                             pin_memory=True,
                             shuffle=True,
-                            prefetch_factor=2,  # Number of batches to prefetch
-                            persistent_workers=True)  # Keep worker processes alive
+                            prefetch_factor=2,
+                            persistent_workers=True)
     
     
     val_loader = DataLoader(val_dataset,
@@ -136,7 +136,7 @@ def train(cfg):
 
         inputs = inputs.to(device).float()
         cls_labels = cls_labels.to(device).float()
-        # Mixed precision forward pass
+        
         with torch.cuda.amp.autocast():
             cls1, cam1, cls2, cam2, cls3, cam3, cls4, cam4, l_fea, k_list = model(inputs)
 
@@ -229,7 +229,7 @@ def train(cfg):
     total_training_time = end_time - start_time
     print(f'Total training time: {total_training_time}')
 
-    # ============ 后训练评估和CAM生成 ============
+    
     print("\n" + "="*80)
     print("POST-TRAINING EVALUATION AND CAM GENERATION")
     print("="*80)
