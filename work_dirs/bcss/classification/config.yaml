@@ -1,0 +1,45 @@
+model:
+  backbone:
+    config: mit_b1
+    stride:
+    - 4
+    - 2
+    - 2
+    - 1
+  label_feature_path: bcss_label_fea_pro_3333
+  n_ratio: 0.5
+dataset:
+  name: bcss
+  train_root: ./data/BCSS-WSSS/train
+  val_root: ./data/BCSS-WSSS/
+  cls_num_classes: 4
+  input_size:
+  - 224
+  - 224
+work_dir:
+  ckpt_dir: checkpoints
+  pred_dir: predictions
+  train_log_dir: train_log
+train:
+  samples_per_gpu: 10
+  epoch: 8
+  pretrained: true
+  l1: 0.0
+  l2: 0.1
+  l3: 1.0
+  l4: 1.5
+  l5: 0.0
+  mask_adapter_alpha: 0.5
+  merge_train: mean
+  merge_test: max
+optimizer:
+  type: AdamW
+  learning_rate: 0.00005
+  betas:
+  - 0.9
+  - 0.999
+  weight_decay: 0.001
+scheduler:
+  warmup_iter: 0
+  warmup_ratio: 1.0e-06
+  power: 1.0
