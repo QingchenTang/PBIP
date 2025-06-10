@@ -5,7 +5,7 @@
 > **Prototype-Based Image Prompting for Weakly Supervised Histopathological Image Segmentation**  
 > *CVPR 2025*
 
-[📄 Paper](#)
+[📄 Paper](https://arxiv.org/abs/2503.12068)
 
 ---
 
