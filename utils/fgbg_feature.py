@@ -41,7 +41,7 @@ class FeatureExtractor:
         
     def prepare_cam_mask(self, cam, N):
         cam_224 = F.interpolate(cam, (self.clip_size, self.clip_size), 
-                              mode="bilinear", align_corners=False)
+                              mode="bilinear", align_corners=True)
         cam_224 = cam_224.reshape(N * cam.size(1), 1, self.clip_size, self.clip_size)
 
         cam_224_mask = self.mask_adapter(cam_224)
@@ -50,7 +50,7 @@ class FeatureExtractor:
         
     def prepare_image(self, img):
         return F.interpolate(img, (self.clip_size, self.clip_size), 
-                           mode="bilinear", align_corners=False)
+                           mode="bilinear", align_corners=True)
         
     @torch.cuda.amp.autocast()
     def extract_features(self, img_224, cam_224, cam_224_mask, label):
@@ -94,7 +94,7 @@ class FeatureExtractor:
             return None
             
         cam_224 = F.interpolate(cam, (self.clip_size, self.clip_size), 
-                               mode="bilinear", align_corners=False)
+                               mode="bilinear", align_corners=True)
        
         cam_224_mask = self.mask_adapter(cam_224)
         
