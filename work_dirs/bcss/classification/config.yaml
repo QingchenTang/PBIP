@@ -28,7 +28,7 @@ train:
   l2: 0.1
   l3: 1.0
   l4: 1.5
-  l5: 0.0
+  l5: 0.1
   mask_adapter_alpha: 0.5
   merge_train: mean
   merge_test: max
