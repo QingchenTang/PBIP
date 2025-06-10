@@ -33,7 +33,7 @@ def get_seg_label(cams, inputs, label):
         cams = torch.from_numpy(cams).float()
         
         # Resize to input dimensions
-        cams = F.interpolate(cams, size=(h, w), mode="bilinear", align_corners=False)
+        cams = F.interpolate(cams, size=(h, w), mode="bilinear", align_corners=True)
         cam_max = torch.max(cams, dim=1, keepdim=True)[0]
         bg_cam = (1 - cam_max) ** 10
         cam_all = torch.cat([cams, bg_cam], dim=1)
