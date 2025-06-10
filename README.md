@@ -54,13 +54,6 @@ conda activate pbip
 pip install -r requirements.txt
 ```
 
-### Pre-trained Models
-Download the MiT-B1 backbone pretrained weights:
-```bash
-mkdir pretrained
-# Download mit_b1.pth to pretrained/ directory
-```
-
 ## 📊 Dataset
 
 This project uses the **BCSS (Breast Cancer Semantic Segmentation)** dataset with 5 tissue classes:
