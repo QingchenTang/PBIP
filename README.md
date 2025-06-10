@@ -88,16 +88,6 @@ data/
 ```
 
 ## 🚀 Quick Start
-
-### 1. Prepare Data
-Organize your BCSS dataset according to the structure above and update paths in `work_dirs/bcss/classification/config.yaml`.
-
-### 2. Extract Label Features
-```bash
-# Extract MedCLIP features for prototypes
-python features/extract_medclip_proces.py
-```
-
 Training & Generate CAMs
 ```bash
 # Train the PBIP model
