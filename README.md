@@ -23,14 +23,6 @@
   <p><em>Overview of the PBIP architecture for weakly supervised histopathological image segmentation</em></p>
 </div>
 
-## 🎯 Key Features
-
-- **Multi-Scale Feature Learning**: Hierarchical feature extraction with MiT-B1 backbone
-- **Prototype-Based Prompting**: Learning class-specific prototypes for image-level guidance
-- **Contrastive Learning**: Foreground-background feature discrimination
-- **Dynamic Thresholding**: Adaptive mask generation for better localization
-- **CAM Visualization**: Generate and visualize Class Activation Maps
-
 ## 🛠️ Installation
 
 ### Requirements
